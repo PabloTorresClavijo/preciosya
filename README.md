@@ -1,4 +1,4 @@
-# 🛒 PRECIOSYA — Comparador de Precios de Supermercado
+# <div align="center"> 🛒 PRECIOSYA — Comparador de Precios de Supermercado </div>
 
 <div align="center">
 
@@ -11,6 +11,8 @@
 > [!NOTE]
 > **Repositorio público de portfolio** — El código fuente completo se mantiene en un repositorio privado por razones de seguridad y propiedad intelectual. Este espacio sirve como portfolio técnico y documentación de arquitectura para reclutadores y desarrolladores interesados en el proyecto.
 
+<div align="center">
+
 <br>
 
 Comparador de precios de supermercado en tiempo real. Consulta y compara los precios de **Mercadona, Carrefour, Dia y Lidl** en un mismo lugar, sin moverte de casa.
@@ -19,7 +21,11 @@ Comparador de precios de supermercado en tiempo real. Consulta y compara los pre
 
 ---
 
+</div>
+
 ### 📸 Vista previa
+
+<div align="center">
 
 *(Captura de pantalla de la aplicación)*
 
@@ -27,7 +33,11 @@ Comparador de precios de supermercado en tiempo real. Consulta y compara los pre
 
 ---
 
+</div>
+
 ### 🚀 Tecnologías utilizadas
+
+<div align="center">
 
 | Frontend | Backend | Persistencia |
 |:---:|:---:|:---:|
@@ -40,7 +50,11 @@ Comparador de precios de supermercado en tiempo real. Consulta y compara los pre
 
 ---
 
+</div>
+
 ### ✨ Características
+
+<div align="center">
 
 | **General** |
 |:---|
@@ -78,7 +92,11 @@ Comparador de precios de supermercado en tiempo real. Consulta y compara los pre
 
 ---
 
+</div>
+
 ### 🔒 Seguridad
+
+<div align="center">
 
 | Medida | Descripción |
 |:---|:---|
@@ -92,7 +110,11 @@ Comparador de precios de supermercado en tiempo real. Consulta y compara los pre
 
 ---
 
+</div>
+
 ### 📁 Estructura del proyecto
+
+<div align="center">
 
 ```
 PRECIOSYA/
@@ -119,7 +141,11 @@ PRECIOSYA/
 
 ---
 
+</div>
+
 ### ⚙️ Instalación
+
+<div align="center">
 
 1. Clona el repositorio en tu servidor local (XAMPP, Laragon, etc.)
 2. Importa `database.sql` en tu instancia de MySQL
@@ -130,7 +156,11 @@ PRECIOSYA/
 
 ---
 
+</div>
+
 ### 🎨 Diseño
+
+<div align="center">
 
 Estética **brutalist funcional**. Esquinas rectas, tipografía condensada (**Bebas Neue** + **IBM Plex Mono**), un único color de acento verde. La interfaz no compite con los datos — los presenta.
 
@@ -139,3 +169,5 @@ Estética **brutalist funcional**. Esquinas rectas, tipografía condensada (**Be
 ---
 
 <sub>Hecho con el objetivo de que nadie pague de más en el súper 🛒</sub>
+
+</div>
