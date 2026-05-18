@@ -1,18 +1,17 @@
-# <div align="center"> 🛒 PRECIOSYA — Comparador de Precios de Supermercado </div>
+# 🛒 PRECIOSYA — Comparador de Precios de Supermercado
 
 <div align="center">
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white) ![API REST](https://img.shields.io/badge/api_rest-%230055ff.svg?style=for-the-badge&logo=api-dot-video&logoColor=white) ![LocalStorage](https://img.shields.io/badge/localStorage-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 </div>
+
 <br>
 
 > [!NOTE]
 > **Repositorio público de portfolio** — El código fuente completo se mantiene en un repositorio privado por razones de seguridad y propiedad intelectual. Este espacio sirve como portfolio técnico y documentación de arquitectura para reclutadores y desarrolladores interesados en el proyecto.
 
 <br>
-
-<div align="center">
 
 Comparador de precios de supermercado en tiempo real. Consulta y compara los precios de **Mercadona, Carrefour, Dia y Lidl** en un mismo lugar, sin moverte de casa.
 
@@ -139,14 +138,4 @@ Estética **brutalist funcional**. Esquinas rectas, tipografía condensada (**Be
 
 ---
 
-### 📬 Contacto
-
-*(Añade aquí tu email o redes sociales)*
-
-<br>
-
----
-
 <sub>Hecho con el objetivo de que nadie pague de más en el súper 🛒</sub>
-
-</div>
