@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRECIOSYA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <link rel="icon" type="image/png" href="img/logo2.png">
+
+</head>
+
+<body class="light">
+    <!-- PANTALLA DE CARGA -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="splash-content">
+            <div class="splash-logo-wrap">
+                <img src="img/logo2.png" alt="Logo" class="splash-logo">
+                <span class="splash-title">PRECIOSYA</span>
+            </div>
+            <div class="splash-bar-wrap">
+                <div class="splash-bar"></div>
+            </div>
+            <span class="splash-sub">Cargando productos...</span>
+        </div>
+    </div>
+
+<header>
+    <div class="logo">
+        <img src="img/logo2.png" alt="Logo" class="logo-img">
+        <span class="logo-text">PRECIOSYA</span>
+    </div>
+    <div class="search-area">
+        <input type="text" id="searchInput" placeholder="Buscar producto...">
+        <div id="suggestions"></div>
+    </div>
+
+    <div class="header-actions">
+        <button id="favToggle" class="icon-btn">
+            <span class="material-symbols-rounded">favorite</span>
+        </button>
+        <button id="cartToggle" class="icon-btn cart-btn">
+            <span class="material-symbols-rounded">shopping_cart</span>
+            <span id="cartCount" class="cart-count">0</span>
+        </button>
+
+        <button id="btnCuenta" class="icon-btn">
+            <span class="material-symbols-rounded">account_circle</span>
+        </button>
+        <button id="menuToggle" class="icon-btn">
+            <span class="material-symbols-rounded">menu</span>
+        </button>
+    </div>
+
+
+    <!-- MENÚ USUARIO (aparece al pulsar el icono de cuenta logueado) -->
+    <div id="userMenuPanel" class="user-menu-panel hidden">
+        <div class="user-menu-info">
+            <span class="material-symbols-rounded" style="font-size:32px;color:var(--accent)">account_circle</span>
+            <div>
+                <strong id="userMenuNombre"></strong>
+                <small id="userMenuEmail"></small>
+            </div>
+        </div>
+        <hr>
+        <button id="userMenuLogout" class="user-menu-btn">
+            <span class="material-symbols-rounded">logout</span> Cerrar sesión
+        </button>
+    </div>
+</header>
+
+<!-- MENÚ HAMBURGUESA -->
+<div id="menuOverlay" class="menu-overlay"></div>
+<nav id="menuPanel" class="menu-panel">
+    <div class="menu-header">
+        <span class="logo-text" style="font-size: 22px;">PRECIOSYA</span>
+        <button id="menuClose" class="icon-btn">
+            <span class="material-symbols-rounded">close</span>
+        </button>
+    </div>
+
+    <div class="menu-section">
+        <span class="menu-label">Apariencia</span>
+        <button id="darkToggle" class="menu-item">
+            <span class="material-symbols-rounded">dark_mode</span>
+            <span id="darkToggleText">Modo oscuro</span>
+        </button>
+    </div>
+
+    <div class="menu-section" id="menuSeccionCuenta">
+    <span class="menu-label">Cuenta</span>
+    <div id="menuUsuarioLogueado" class="hidden">
+        <div class="menu-user-info">
+            <span class="material-symbols-rounded">account_circle</span>
+            <div>
+                <strong id="menuUsuarioNombre"></strong>
+                <small id="menuUsuarioEmail"></small>
+            </div>
+        </div>
+        <button class="menu-item menu-item-danger" id="menuBtnLogout">
+            <span class="material-symbols-rounded">logout</span>
+            <span>Cerrar sesión</span>
+        </button>
+    </div>
+    <div id="menuUsuarioDeslogueado">
+        <button class="menu-item" id="menuBtnLogin">
+            <span class="material-symbols-rounded">login</span>
+            <span>Iniciar sesión</span>
+        </button>
+        <button class="menu-item" id="menuBtnRegistro">
+            <span class="material-symbols-rounded">person_add</span>
+            <span>Crear cuenta</span>
+        </button>
+    </div>
+</div>
+
+<div class="menu-section" id="menuSeccionAdmin" style="display:none">
+    <span class="menu-label">Administración</span>
+    <a href="admin.html" class="menu-item">
+        <span class="material-symbols-rounded">admin_panel_settings</span>
+        <span>Panel de administración</span>
+    </a>
+</div>
+
+
+    <div class="menu-section">
+        <span class="menu-label">Información</span>
+        <button class="menu-item" onclick="abrirModal('como-funciona')">
+            <span class="material-symbols-rounded">help_outline</span>
+            <span>Cómo funciona</span>
+        </button>
+        <button class="menu-item" onclick="abrirModal('privacidad')">
+            <span class="material-symbols-rounded">lock</span>
+            <span>Política de privacidad</span>
+        </button>
+        <button class="menu-item" onclick="abrirModal('terminos')">
+            <span class="material-symbols-rounded">gavel</span>
+            <span>Términos de uso</span>
+        </button>
+        <button class="menu-item" onclick="abrirModal('contacto')">
+            <span class="material-symbols-rounded">mail</span>
+            <span>Contacto</span>
+        </button>
+    </div>
+</nav>
+
+<!-- MODALES DE INFORMACIÓN -->
+<div id="infoModal" class="info-modal hidden">
+    <div class="info-modal-content">
+        <div class="info-modal-header">
+            <h2 id="infoModalTitle"></h2>
+            <button onclick="cerrarModal()" class="icon-btn">
+                <span class="material-symbols-rounded">close</span>
+            </button>
+        </div>
+        <div id="infoModalBody"></div>
+    </div>
+</div>
+
+    <!-- PANEL CARRITO LATERAL -->
+    <aside id="carritoPanel" class="carrito-lateral"></aside>
+
+    <!-- FILTROS -->
+    <!-- BOTÓN FILTROS MOBILE -->
+    <button id="btnAbrirFiltros" class="btn-filtros-mobile hidden-desktop">
+        <span class="material-symbols-rounded">filter_alt</span>
+        Filtros
+    </button>
+
+    <!-- OVERLAY FILTROS -->
+    <div id="filtrosOverlay" class="filtros-overlay hidden"></div>
+
+    <!-- FILTROS -->
+    <section class="filters" id="filtersPanel">
+        <div>
+            <label>Supermercado (más barato)</label>
+            <select id="filtroSuper">
+                <option value="">Todos</option>
+                <option value="Mercadona">Mercadona</option>
+                <option value="Carrefour">Carrefour</option>
+                <option value="Dia">Dia</option>
+                <option value="Lidl">Lidl</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Categoría</label>
+            <select id="filtroCategoria">
+                <option value="">Todas</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Precio mín (€)</label>
+            <input type="number" id="filtroPrecioMin" min="0" step="0.01" placeholder="0.00">
+        </div>
+
+        <div>
+            <label>Precio máx (€)</label>
+            <input type="number" id="filtroPrecioMax" min="0" step="0.01" placeholder="Sin límite">
+        </div>
+
+        <div>
+            <label>Ordenar por</label>
+            <select id="filtroOrden">
+                <option value="">Por defecto</option>
+                <option value="precio-asc">Precio: menor a mayor</option>
+                <option value="precio-desc">Precio: mayor a menor</option>
+                <option value="nombre-asc">Nombre: A → Z</option>
+                <option value="nombre-desc">Nombre: Z → A</option>
+            </select>
+        </div>
+
+        <div class="filtros-botones">
+            <button id="btnAplicarFiltros" class="btn-aplicar-filtros">
+                <span class="material-symbols-rounded">filter_alt</span>
+                Aplicar filtros
+            </button>
+            
+        </div>
+        <div class="filtros-botones">
+            <button id="btnReiniciarFiltros" class="btn-reiniciar-filtros">
+                <span class="material-symbols-rounded">restart_alt</span>    
+            </button>
+        </div>
+
+    </section>
+
+    <main>
+        <section class="layout">
+            <div class="result-panel">
+                <h2 id="tituloResultados">Resultados</h2>
+                <div id="resultados"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <span class="logo-text" style="font-size: 28px;">PRECIOSYA</span>
+            <p>Comparador académico de precios entre supermercados españoles. Proyecto educativo sin fines comerciales.</p>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-meta">
+            <div class="footer-supers">
+                <span>Mercadona</span>
+                <span>Carrefour</span>
+                <span>Dia</span>
+                <span>Lidl</span>
+            </div>
+            <p class="footer-aviso">⚠ Los precios mostrados son simulados y no reflejan precios reales.</p>
+            <p class="footer-copy">© 2026 PRECIOSYA — Uso académico</p>
+        </div>
+    </div>
+</footer>
+    <!-- MODAL COMPARTIR CARRITO -->
+    <div id="compartirModal" class="compartir-modal hidden">
+        <div class="compartir-modal-overlay" onclick="cerrarCompartirModal()"></div>
+        <div class="compartir-modal-content">
+            <button class="compartir-modal-close icon-btn" onclick="cerrarCompartirModal()">
+                <span class="material-symbols-rounded">close</span>
+            </button>
+            <div class="compartir-modal-body">
+                <h2>📤 Compartir carrito</h2>
+                <p class="compartir-subtitle">Copia el enlace para compartir tu carrito con otros</p>
+                
+                <div class="compartir-link-container">
+                    <input type="text" id="compartirLink" class="compartir-link-input" readonly>
+                    <button id="btnCopiarLink" class="btn-copiar-link">
+                        <span class="material-symbols-rounded">content_copy</span> Copiar
+                    </button>
+                </div>
+                
+                <div class="compartir-opciones">
+                    <label class="compartir-opcion">
+                        <input type="checkbox" id="incluirCantidades" checked>
+                        <span>Incluir cantidades exactas</span>
+                    </label>
+                    <label class="compartir-opcion">
+                        <input type="checkbox" id="incluirPrecios" checked>
+                        <span>Incluir precios actuales</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DETALLE PRODUCTO -->
+<div id="productoModal" class="producto-modal hidden">
+    <div class="producto-modal-overlay" onclick="cerrarProductoModal()"></div>
+    <div class="producto-modal-content">
+        <button class="producto-modal-close icon-btn" onclick="cerrarProductoModal()">
+            <span class="material-symbols-rounded">close</span>
+        </button>
+
+        <div class="producto-modal-body">
+            <!-- SECCIÓN IZQUIERDA: FOTO + DESCRIPCIÓN -->
+            <div class="producto-modal-img-wrap">
+                <div class="producto-modal-img-container">
+                    <img id="modalImg" src="" alt="">
+                </div>
+            </div>
+
+            <!-- SECCIÓN DERECHA: INFO DEL PRODUCTO -->
+            <div class="producto-modal-info">
+                <!-- CATEGORÍA Y TÍTULO -->
+                <div class="modal-header-section">
+                    <span id="modalCategoria" class="modal-tag"></span>
+                    <h2 id="modalNombre"></h2>
+                </div>
+
+                <!-- DESCRIPCIÓN -->
+                <div class="modal-desc-section">
+                    <h3>Descripción</h3>
+                    <p id="modalDesc" class="desc-text"></p>
+                </div>
+
+                <!-- ALÉRGENOS -->
+                <div class="modal-allergens-section" id="modalAllergensSection">
+                    <h3>Alérgenos</h3>
+                    <div id="modalAllergens" class="allergens-container"></div>
+                </div>
+
+                <!-- PRECIOS -->
+                <div class="modal-precios-section">
+                    <h3>Precios por supermercado</h3>
+                    <div id="modalPrecios" class="modal-precios-grid"></div>
+                </div>
+
+                <!-- MÁS BARATO -->
+                <div class="modal-mejor-wrap">
+                    <span class="modal-mejor-label">🥇 Más barato en</span>
+                    <span id="modalMejor" class="modal-mejor-valor"></span>
+                </div>
+                <button class="btn-share-modal" id="modalBtnCompartir">
+                    <span class="material-symbols-rounded">share</span>
+                    Compartir producto
+                </button>
+                <!-- FAVORITO -->
+                <button class="btn-fav-modal" id="modalBtnFav">
+                    <span class="material-symbols-rounded">favorite</span>
+                    Añadir a favoritos
+                </button>
+                <!-- BOTÓN CARRITO -->
+                <button class="btn-add-carrito" id="modalBtnCarrito">Añadir al carrito</button>
+            </div>
+        </div>
+        <!-- PRODUCTOS RELACIONADOS -->
+        <div class="modal-relacionados" id="modalRelacionados">
+            <h3 class="modal-relacionados-titulo">Productos similares</h3>
+            <div class="modal-relacionados-grid" id="modalRelacionadosGrid"></div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <button id="volverArriba" class="volver-arriba">
+        <span class="material-symbols-rounded">arrow_upward</span>
+    </button>
+
+    <!-- MODAL LOGIN / REGISTRO -->
+<div id="authModal" class="auth-modal hidden">
+    <div id="authModalOverlay" class="auth-modal-overlay"></div>
+    <div class="auth-modal-content">
+        <button id="authModalClose" class="icon-btn auth-modal-close">
+            <span class="material-symbols-rounded">close</span>
+        </button>
+        <div class="auth-modal-brand">
+            <img src="img/logo2.png" alt="Logo" style="width:36px">
+            <span class="logo-text" style="font-size:20px">PRECIOSYA</span>
+        </div>
+        <h2 id="authModalTitle">Iniciar sesión</h2>
+
+        <!-- FORMULARIO LOGIN -->
+        <div id="authLoginForm">
+            <div class="auth-field">
+                <label>Email</label>
+                <input type="email" id="authLoginEmail" placeholder="tu@email.com" autocomplete="email">
+            </div>
+            <div class="auth-field">
+                <label>Contraseña</label>
+                <input type="password" id="authLoginPass" placeholder="••••••••" autocomplete="current-password">
+            </div>
+            <p class="auth-error" id="authLoginError"></p>
+            <button id="authBtnLogin" class="btn-primary auth-btn">Entrar</button>
+            <p class="auth-switch">¿No tienes cuenta? <button id="authIrRegistro" class="auth-link">Crear cuenta</button></p>
+        </div>
+
+        <!-- FORMULARIO REGISTRO -->
+        <div id="authRegistroForm" class="hidden">
+            <div class="auth-field">
+                <label>Nombre</label>
+                <input type="text" id="authRegNombre" placeholder="Tu nombre" autocomplete="name">
+            </div>
+            <div class="auth-field">
+                <label>Email</label>
+                <input type="email" id="authRegEmail" placeholder="tu@email.com" autocomplete="email">
+            </div>
+            <div class="auth-field">
+                <label>Contraseña</label>
+                <input type="password" id="authRegPass" placeholder="Mínimo 6 caracteres" autocomplete="new-password">
+            </div>
+            <div class="auth-field">
+                <label>Repetir contraseña</label>
+                <input type="password" id="authRegPass2" placeholder="••••••••" autocomplete="new-password">
+            </div>
+            <p class="auth-error" id="authRegistroError"></p>
+            <button id="authBtnRegistro" class="btn-primary auth-btn">Crear cuenta</button>
+            <p class="auth-switch">¿Ya tienes cuenta? <button id="authIrLogin" class="auth-link">Iniciar sesión</button></p>
+        </div>
+    </div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>

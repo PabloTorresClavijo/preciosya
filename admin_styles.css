@@ -1,0 +1,1192 @@
+/* ============================================================
+   VARIABLES — mismas que el index
+============================================================ */
+:root {
+    --admin-bg: #eef2ec;
+    --admin-card: #f7f9f6;
+    --admin-accent: #6f8f72;
+    --admin-accent-hover: #5d7a60;
+    --admin-danger: #c0392b;
+    --admin-text: #2f3e33;
+    --admin-border: #3d4a3f;
+    --admin-border-thin: #c7d1c5;
+    --admin-stripe: #e3e8e1;
+    --admin-muted: #7c8b7e;
+}
+html, body {
+    overflow-x: auto;
+}
+
+#adminContent {
+    overflow-x: auto;
+    width: 100%;
+}
+body.light {
+    background-color: var(--admin-bg);
+    color: var(--admin-text);
+}
+
+/* ============================================================
+   LOGIN
+============================================================ */
+.login-wrapper {
+    min-height: 100vh;
+    background: var(--admin-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card {
+    background: var(--admin-card);
+    border: 3px solid var(--admin-border);
+    border-radius: 0;
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.login-logo {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+}
+
+.login-badge {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    background: var(--admin-border);
+    color: var(--admin-bg);
+    padding: 3px 8px;
+    align-self: center;
+}
+
+.login-divider {
+    width: 100%;
+    height: 3px;
+    background: var(--admin-border);
+    margin-bottom: 24px;
+}
+
+.login-subtitle {
+    font-size: 10px;
+    color: var(--admin-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.login-field label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--admin-muted);
+}
+
+.login-field input {
+    padding: 10px 12px;
+    border: 2px solid var(--admin-border);
+    background: var(--admin-bg);
+    color: var(--admin-text);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px;
+    outline: none;
+    border-radius: 0;
+    transition: border-color 0.15s;
+}
+
+.login-field input:focus {
+    border-color: var(--admin-accent);
+    background: #f7f9f6;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--admin-border);
+    color: var(--admin-bg);
+    border: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background 0.15s;
+    margin-bottom: 4px;
+}
+
+.login-btn:hover {
+    background: var(--admin-accent);
+}
+
+.login-back {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--admin-muted);
+    text-decoration: none;
+    font-family: "IBM Plex Mono", monospace;
+    transition: color 0.15s;
+}
+
+.login-back:hover {
+    color: var(--admin-accent);
+}
+
+/* ============================================================
+   HEADER ADMIN
+============================================================ */
+#adminContent header {
+    background: var(--admin-bg);
+    border-bottom: 3px solid var(--admin-border);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#adminContent header .logo-text small {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    background: var(--admin-border);
+    color: var(--admin-bg);
+    padding: 2px 6px;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+#adminContent header .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+/* ============================================================
+   ESTRUCTURA PRINCIPAL
+============================================================ */
+.admin-main {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 0;
+    max-width: 100%;
+    min-height: calc(100vh - 72px);
+}
+
+/* ============================================================
+   FORMULARIO LATERAL
+============================================================ */
+.sidebar-form {
+    position: sticky;
+    top: 72px;
+    height: calc(100vh - 72px);
+    overflow-y: auto;
+    border-right: 3px solid var(--admin-border);
+    background: var(--admin-card);
+}
+
+.admin-card {
+    background: transparent;
+    padding: 24px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.admin-card h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--admin-border);
+    color: var(--admin-text);
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 5px;
+    color: var(--admin-muted);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 9px 10px;
+    border: 2px solid var(--admin-border-thin);
+    border-radius: 0;
+    background: var(--admin-bg);
+    color: var(--admin-text);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 13px;
+    transition: border-color 0.15s;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--admin-accent);
+}
+
+.precios-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: var(--admin-stripe);
+    padding: 14px;
+    border-radius: 0;
+    margin-bottom: 14px;
+    border: 1px solid var(--admin-border-thin);
+}
+
+.precios-grid .form-group {
+    margin-bottom: 0;
+}
+
+/* Botones del formulario */
+.btn-primary {
+    background: var(--admin-accent);
+    color: #fff;
+    border: 2px solid var(--admin-accent);
+    padding: 10px 16px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background 0.15s, border-color 0.15s;
+    letter-spacing: 0.02em;
+}
+
+.btn-primary:hover {
+    background: var(--admin-accent-hover);
+    border-color: var(--admin-accent-hover);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--admin-text);
+    border: 2px solid var(--admin-border-thin);
+    padding: 10px 16px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-secondary:hover {
+    background: var(--admin-stripe);
+    border-color: var(--admin-border);
+}
+
+/* ============================================================
+   TABLA DE PRODUCTOS
+============================================================ */
+.table-container {
+    background: var(--admin-bg);
+    border-radius: 0;
+    border: none;
+    overflow: visible;        /* era hidden */
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.table-container > div:first-child {
+    padding: 16px 24px !important;
+    border-bottom: 2px solid var(--admin-border) !important;
+    background: var(--admin-card) !important;
+}
+
+#adminSearch {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid var(--admin-border-thin);
+    border-radius: 0;
+    background: var(--admin-bg);
+    color: var(--admin-text);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+#adminSearch:focus {
+    border-color: var(--admin-accent);
+    box-shadow: none;
+}
+
+.table-scroll {
+    max-height: calc(100vh - 72px - 62px);
+    overflow-y: auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 520px;
+}
+
+thead th {
+    background: var(--admin-border);
+    color: var(--admin-bg);
+    padding: 12px 10px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+}
+
+tbody td {
+    padding: 11px 10px;
+    border-bottom: 1px solid var(--admin-border-thin);
+    font-size: 13px;
+    color: var(--admin-text);
+}
+
+tbody tr:hover {
+    background-color: var(--admin-stripe);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--admin-card);
+}
+
+tbody tr:nth-child(even):hover {
+    background-color: var(--admin-stripe);
+}
+
+.img-mini {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    border-radius: 0;
+    background-color: var(--admin-bg);
+    display: block;
+    margin: 0 auto;
+    border: 1px solid var(--admin-border-thin);
+}
+
+td:first-child {
+    width: 56px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* ============================================================
+   BOTONES DE TABLA
+============================================================ */
+.btn-edit {
+    background: var(--admin-accent);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: "IBM Plex Sans", sans-serif;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background 0.15s;
+}
+
+.btn-delete {
+    background: var(--admin-danger);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 0;
+    cursor: pointer;
+    margin-left: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: "IBM Plex Sans", sans-serif;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background 0.15s;
+}
+
+.btn-edit:hover {
+    background: var(--admin-accent-hover);
+}
+
+.btn-delete:hover {
+    background: #a93226;
+}
+
+/* ============================================================
+   ICON BTN
+============================================================ */
+.icon-btn {
+    width: 42px;
+    height: 42px;
+    border: 2px solid var(--admin-border);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--admin-text);
+    transition: background 0.15s, color 0.15s;
+    text-decoration: none;
+}
+
+.icon-btn:hover {
+    background: var(--admin-accent);
+    color: white;
+    border-color: var(--admin-accent);
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET (max 900px)
+============================================================ */
+@media (max-width: 900px) {
+    .admin-main {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        overflow-x: auto;     /* añadir esto */
+        width: 100%;          /* añadir esto */
+    }
+
+    .sidebar-form {
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 3px solid var(--admin-border);
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MÓVIL (max 768px)
+============================================================ */
+@media (max-width: 768px) {
+    #adminContent header {
+        padding: 0 16px;
+        height: 60px;
+    }
+
+    .admin-card {
+        padding: 16px;
+    }
+
+    .precios-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    /* Cadena completa que permite el scroll horizontal */
+    .admin-main {
+        overflow: visible;
+    }
+
+    .table-container {
+        overflow: visible;
+        width: 100%;
+    }
+
+   .table-scroll {
+        overflow: visible;
+        max-height: none;
+    }
+
+    table, thead, tbody, tr, th, td {
+        display: block;
+    }
+
+    thead {
+        display: none;   /* ocultar cabecera */
+    }
+
+    tbody tr {
+        border: 1px solid var(--admin-border-thin);
+        margin-bottom: 10px;
+        background: var(--admin-card);
+        padding: 10px 12px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+    }
+
+    tbody td {
+        border: none;
+        padding: 2px 4px;
+        font-size: 12px;
+    }
+
+    /* Imagen pequeña a la izquierda */
+    tbody td:nth-child(1) {
+        flex: 0 0 auto;
+    }
+
+    /* ID oculto en móvil */
+    tbody td:nth-child(2) {
+        display: none;
+    }
+
+    /* Nombre ocupa toda la fila */
+    tbody td:nth-child(3) {
+        flex: 1 1 100%;
+        font-weight: 600;
+        font-size: 13px;
+        padding: 4px 0;
+        border-bottom: 1px solid var(--admin-border-thin);
+        margin-bottom: 4px;
+    }
+
+    /* Precios en línea */
+    tbody td:nth-child(4)::before { content: "Mer: "; font-weight: 700; color: var(--admin-muted); font-size: 10px; }
+    tbody td:nth-child(5)::before { content: "Car: "; font-weight: 700; color: var(--admin-muted); font-size: 10px; }
+    tbody td:nth-child(6)::before { content: "Dia: "; font-weight: 700; color: var(--admin-muted); font-size: 10px; }
+    tbody td:nth-child(7)::before { content: "Lidl: "; font-weight: 700; color: var(--admin-muted); font-size: 10px; }
+
+    /* Acciones ocupan toda la fila al final */
+    tbody td:nth-child(8) {
+        flex: 1 1 100%;
+        display: flex;
+        gap: 6px;
+        margin-top: 6px;
+        padding-top: 8px;
+        border-top: 1px solid var(--admin-border-thin);
+    }
+
+    .btn-edit, .btn-delete {
+        flex: 1;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MÓVIL PEQUEÑO (max 480px)
+============================================================ */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 28px 20px;
+        border-width: 2px;
+    }
+
+    .admin-card {
+        padding: 14px;
+    }
+
+    .admin-card h2 {
+        font-size: 26px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 9px;
+        font-size: 0.85rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    thead th {
+        font-size: 9px;
+        padding: 8px 5px;
+    }
+
+    tbody td {
+        font-size: 11px;
+        padding: 8px 5px;
+    }
+
+    .img-mini {
+        width: 36px;
+        height: 36px;
+    }
+
+    td:first-child {
+        width: 44px;
+    }
+}
+
+.no-disp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    background: var(--admin-stripe);
+    padding: 12px;
+    border: 1px solid var(--admin-border-thin);
+}
+
+.check-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--admin-text);
+    cursor: pointer;
+}
+
+.check-label input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    accent-color: var(--admin-accent);
+    cursor: pointer;
+}
+
+/* Badge en la tabla */
+.badge-nodisp {
+    display: inline-block;
+    background: #c0392b;
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 4px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.img-upload-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 8px;
+}
+
+.img-tab {
+    flex: 1;
+    padding: 7px;
+    border: 2px solid var(--admin-border-thin);
+    background: var(--admin-bg);
+    color: var(--admin-muted);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    font-family: "IBM Plex Sans", sans-serif;
+    transition: background 0.15s, color 0.15s;
+}
+
+.img-tab.active {
+    background: var(--admin-border);
+    color: var(--admin-bg);
+    border-color: var(--admin-border);
+}
+
+.upload-area {
+    border: 2px dashed var(--admin-border-thin);
+    background: var(--admin-bg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+}
+
+.upload-area:hover {
+    border-color: var(--admin-accent);
+    background: var(--admin-stripe);
+}
+
+.upload-area .material-symbols-rounded {
+    font-size: 32px;
+    color: var(--admin-accent);
+}
+
+.upload-area p {
+    font-size: 12px;
+    color: var(--admin-muted);
+    text-align: center;
+    margin: 0;
+}
+
+.upload-area.drag-over {
+    border-color: var(--admin-accent);
+    background: var(--admin-stripe);
+}
+
+.img-preview {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--admin-stripe);
+    padding: 10px;
+    border: 1px solid var(--admin-border-thin);
+}
+
+.img-preview img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border: 1px solid var(--admin-border-thin);
+    background: white;
+}
+
+.btn-quitar-img {
+    font-size: 11px;
+    background: transparent;
+    border: 1px solid var(--admin-danger);
+    color: var(--admin-danger);
+    padding: 4px 8px;
+    cursor: pointer;
+    font-family: "IBM Plex Sans", sans-serif;
+    transition: background 0.15s;
+}
+
+.btn-quitar-img:hover {
+    background: var(--admin-danger);
+    color: white;
+}
+
+/* ============================================================
+   MODAL ESTADÍSTICAS
+============================================================ */
+.stats-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.stats-modal.hidden {
+    display: none;
+}
+
+.stats-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.stats-modal-content {
+    position: relative;
+    background: var(--admin-card);
+    border: 3px solid var(--admin-border);
+    width: 100%;
+    max-width: 680px;
+    max-height: 88vh;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.stats-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 2px solid var(--admin-border);
+    position: sticky;
+    top: 0;
+    background: var(--admin-card);
+    z-index: 1;
+}
+
+.stats-modal-header h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.04em;
+}
+
+.stats-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* KPIs */
+.stats-kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 2px solid var(--admin-border);
+}
+
+.stats-kpi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 12px;
+    border-right: 1px solid var(--admin-border-thin);
+    gap: 4px;
+    text-align: center;
+}
+
+.stats-kpi:last-child {
+    border-right: none;
+}
+
+.stats-kpi-valor {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 36px;
+    color: var(--admin-accent);
+    line-height: 1;
+}
+
+.stats-kpi-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--admin-muted);
+}
+
+/* Títulos de sección */
+.stats-section-title {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--admin-muted);
+    border-bottom: 1px solid var(--admin-border-thin);
+    padding-bottom: 6px;
+    margin-bottom: -10px;
+}
+
+/* Destacados */
+.stats-destacados {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stats-dest-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    background: var(--admin-bg);
+    border: 1px solid var(--admin-border-thin);
+}
+
+.stats-dest-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.stats-dest-nombre {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--admin-text);
+}
+
+.stats-dest-sub {
+    font-size: 11px;
+    color: var(--admin-muted);
+    margin-top: 2px;
+}
+
+/* Barras por categoría */
+.stats-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stats-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stats-bar-label {
+    font-size: 11px;
+    color: var(--admin-text);
+    width: 160px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stats-bar-track {
+    flex: 1;
+    height: 10px;
+    background: var(--admin-stripe);
+    border: 1px solid var(--admin-border-thin);
+}
+
+.stats-bar-fill {
+    height: 100%;
+    background: var(--admin-accent);
+    transition: width 0.4s ease;
+}
+
+.stats-bar-count {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    color: var(--admin-muted);
+    width: 24px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+/* No disponibles */
+.stats-nodisp-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--admin-border-thin);
+}
+
+.stats-nodisp-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 8px;
+    border-right: 1px solid var(--admin-border-thin);
+    gap: 4px;
+}
+
+.stats-nodisp-item:last-child {
+    border-right: none;
+}
+
+.stats-nodisp-super {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--admin-muted);
+}
+
+.stats-nodisp-n {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 28px;
+    color: var(--admin-danger);
+    line-height: 1;
+}
+
+/* Responsive stats */
+@media (max-width: 600px) {
+    .stats-kpis {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stats-kpi:nth-child(2) {
+        border-right: none;
+    }
+    .stats-kpi:nth-child(1),
+    .stats-kpi:nth-child(2) {
+        border-bottom: 1px solid var(--admin-border-thin);
+    }
+    .stats-bar-label {
+        width: 100px;
+    }
+    .stats-nodisp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stats-nodisp-item:nth-child(2) {
+        border-right: none;
+    }
+    .stats-nodisp-item:nth-child(1),
+    .stats-nodisp-item:nth-child(2) {
+        border-bottom: 1px solid var(--admin-border-thin);
+    }
+}
+
+/* ============================================================
+   MENÚ HAMBURGUESA
+============================================================ */
+.admin-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 199;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.admin-menu-overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.admin-menu-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    background: var(--admin-card);
+    border-right: 3px solid var(--admin-border);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 0;
+}
+
+.admin-menu-panel.visible {
+    transform: translateX(0);
+}
+
+.admin-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 16px;
+    border-bottom: 2px solid var(--admin-border);
+    flex-shrink: 0;
+}
+
+.admin-menu-header .logo-text {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.04em;
+    color: var(--admin-text);
+}
+
+.admin-menu-header .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: 2px solid var(--admin-border-thin);
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--admin-text);
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.admin-menu-header .icon-btn:hover {
+    background: var(--admin-stripe);
+    border-color: var(--admin-border);
+}
+
+.admin-menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--admin-border-thin);
+    overflow-y: auto;
+    flex-shrink: 1;
+}
+
+.admin-menu-section:last-child {
+    border-bottom: none;
+    margin-top: auto;
+}
+
+.admin-menu-label {
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--admin-muted);
+    padding: 0 16px 8px 16px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--admin-border-thin);
+}
+
+.admin-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    color: var(--admin-text);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.admin-menu-item:hover {
+    background: var(--admin-stripe);
+}
+
+.admin-menu-item .material-symbols-rounded {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.admin-menu-item.admin-menu-danger {
+    color: var(--admin-danger);
+}
+
+.admin-menu-item.admin-menu-danger:hover {
+    background: rgba(192, 57, 43, 0.1);
+}
+
+/* ============================================================
+   BOTÓN MENÚ EN HEADER
+============================================================ */
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--admin-border-thin);
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--admin-text);
+    transition: background 0.15s, border-color 0.15s;
+    padding: 0;
+}
+
+.icon-btn:hover {
+    background: var(--admin-stripe);
+    border-color: var(--admin-border);
+}

@@ -1,0 +1,17 @@
+Productos:
+-----------
+Etiqueta de oferta o precio rebajado en el JSON(Dudoso)
+ 
+
+BACKEND:
+-----------
+-Ordenar archivos en carpetas sin que pierdan funcionalidad
+
+--------------------------
+CUENTAS:
+-------------------------
+pablo@gmail.com   pablo123
+dani@gmail.com    dani123
+
+admin@preciosya.com   password
+

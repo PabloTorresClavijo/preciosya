@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - PRECIOSYA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <link rel="stylesheet" href="admin_styles.css">
+    <link rel="icon" type="image/png" href="img/logo2.png">
+
+</head>
+<body class="light">
+
+<div id="loginSection" class="login-wrapper">
+    <div class="login-card">
+        <div class="login-brand">
+            <img src="img/logo2.png" alt="Logo" class="login-logo">
+            <span class="logo-text" style="font-size: 32px;">PRECIOSYA</span>
+            <span class="login-badge">ADMIN</span>
+        </div>
+
+        <div class="login-divider"></div>
+
+        <p class="login-subtitle">Introduce la clave de acceso para continuar</p>
+
+        <div class="login-field">
+            <label>Email</label>
+            <input type="email" id="adminEmail" placeholder="admin@preciosya.com">
+        </div>
+        <div class="login-field">
+            <label>Contraseña</label>
+            <input type="password" id="adminPass" placeholder="••••••••">
+        </div>
+
+        <button id="btnLogin" class="login-btn">Entrar</button>
+
+        <p id="loginError" style="color: #e74c3c; font-size: 0.8rem; display: none; text-align: center; margin-top: 8px;">
+            ✕ Clave incorrecta
+        </p>
+
+        <a href="index.html" class="login-back">← Volver al inicio</a>
+    </div>
+</div>
+
+    <div id="adminContent" class="hidden">
+        <header>
+            <div class="logo">
+                <span class="logo-text">PRECIOSYA <small>ADMIN</small></span>
+            </div>
+            <div class="header-actions">
+                <button id="btnLogout" class="btn-secondary" style="padding: 5px 12px; font-size: 0.8rem;">Cerrar Sesión</button>
+                <a href="index.html" class="icon-btn"><span class="material-symbols-rounded">home</span></a>
+                <button id="adminMenuToggle" class="icon-btn">
+                    <span class="material-symbols-rounded">menu</span>
+                </button>
+            </div>
+        </header>
+        <!-- MENÚ LATERAL ADMIN -->
+        <div id="adminMenuOverlay" class="admin-menu-overlay"></div>
+        <nav id="adminMenuPanel" class="admin-menu-panel">
+            <div class="admin-menu-header">
+                <span class="logo-text" style="font-size: 20px;">Menú</span>
+                <button id="adminMenuClose" class="icon-btn">
+                    <span class="material-symbols-rounded">close</span>
+                </button>
+            </div>
+            <div class="admin-menu-section">
+                <span class="admin-menu-label">Estadísticas</span>
+                <button class="admin-menu-item" onclick="abrirEstadisticas()">
+                    <span class="material-symbols-rounded">bar_chart</span>
+                    <span>Ver estadísticas</span>
+                </button>
+            </div>
+            <div class="admin-menu-section">
+                <span class="admin-menu-label">Sesión</span>
+                <button class="admin-menu-item admin-menu-danger" onclick="document.getElementById('btnLogout').click()">
+                    <span class="material-symbols-rounded">logout</span>
+                    <span>Cerrar sesión</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- MODAL ESTADÍSTICAS -->
+        <div id="statsModal" class="stats-modal hidden">
+            <div class="stats-modal-overlay" onclick="cerrarEstadisticas()"></div>
+            <div class="stats-modal-content">
+                <div class="stats-modal-header">
+                    <h2>Estadísticas</h2>
+                    <button onclick="cerrarEstadisticas()" class="icon-btn">
+                        <span class="material-symbols-rounded">close</span>
+                    </button>
+                </div>
+                <div id="statsBody" class="stats-body"></div>
+            </div>
+        </div>
+
+        <main class="admin-main">
+            <section class="sidebar-form">
+                <div class="admin-card">
+                    <h2 id="formTitle">Nuevo Producto</h2>
+                    <div class="form-group">
+                        <label>ID Producto</label>
+                        <input type="number" id="admId">
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" id="admNombre">
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <textarea id="admDesc" rows="3" placeholder="Descripción del producto..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Categoría</label>
+                        <select id="admCat">
+                            <option value="frutas_verduras">Frutas y Verduras</option>
+                            <option value="lacteos">Lácteos y Huevos</option>
+                            <option value="carnes">Carnes y Aves</option>
+                            <option value="bebidas">Bebidas</option>
+                            <option value="despensa">Despensa</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    <div class="precios-grid">
+                        <div class="form-group"><label>Mercadona €</label><input type="number" id="admMer" step="0.01"></div>
+                        <div class="form-group"><label>Carrefour €</label><input type="number" id="admCar" step="0.01"></div>
+                        <div class="form-group"><label>Dia €</label><input type="number" id="admDia" step="0.01"></div>
+                        <div class="form-group"><label>Lidl €</label><input type="number" id="admLid" step="0.01"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Alérgenos</label>
+                        <div class="allergen-checkboxes">
+                            <label class="check-label"><input type="checkbox" class="admAllergen" value="gluten"> 🌾 Gluten</label>
+                            <label class="check-label"><input type="checkbox" class="admAllergen" value="lacteos"> 🥛 Lácteos</label>
+                            <label class="check-label"><input type="checkbox" class="admAllergen" value="huevos"> 🥚 Huevos</label>
+                            <label class="check-label"><input type="checkbox" class="admAllergen" value="pescado"> 🐟 Pescado</label>
+                            <label class="check-label"><input type="checkbox" class="admAllergen" value="frutos_secos"> 🥜 Frutos secos</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Imagen</label>
+                        <div class="img-upload-tabs">
+                            <button type="button" class="img-tab active" id="tabUrl">Por URL</button>
+                            <button type="button" class="img-tab" id="tabFile">Subir archivo</button>
+                        </div>
+                        <div id="panelUrl">
+                            <input type="text" id="admImg" placeholder="productos/imagen.png">
+                        </div>
+                        <div id="panelFile" class="hidden">
+                            <div class="upload-area" id="uploadArea">
+                                <span class="material-symbols-rounded">upload</span>
+                                <p>Haz clic o arrastra una imagen aquí</p>
+                                <input type="file" id="admImgFile" accept="image/*" style="display:none">
+                            </div>
+                        </div>
+                        <div id="imgPreview" class="img-preview hidden">
+                            <img id="imgPreviewImg" src="" alt="Vista previa">
+                            <button type="button" id="btnQuitarImg" class="btn-quitar-img">✕ Quitar</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>No disponible en</label>
+
+                        <div class="no-disp-grid">
+                            <label class="check-label"><input type="checkbox" class="admNoDisp" value="Mercadona"> Mercadona</label>
+                            <label class="check-label"><input type="checkbox" class="admNoDisp" value="Carrefour"> Carrefour</label>
+                            <label class="check-label"><input type="checkbox" class="admNoDisp" value="Dia"> Dia</label>
+                            <label class="check-label"><input type="checkbox" class="admNoDisp" value="Lidl"> Lidl</label>
+                        </div>
+                    </div>
+
+                    <button id="btnGuardar" class="btn-primary" style="width: 100%; margin-top: 10px;">Guardar</button>
+                    <button id="btnCancelar" class="btn-secondary hidden" style="width: 100%; margin-top: 5px;">Cancelar</button>
+                </div>
+            </section>
+
+            <section class="table-container">
+                <div style="padding: 15px; border-bottom: 1px solid var(--admin-border); background: #f9fbf9;">
+                    <div class="form-group" style="margin-bottom: 0; position: relative;">
+                        <input type="text" id="adminSearch" placeholder="Buscar por nombre o ID...">
+                    </div>
+                </div>
+
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Img</th>
+                                <th>ID</th>
+                                <th>Producto</th>
+                                <th>Mer.</th>
+                                <th>Car.</th>
+                                <th>Dia</th>
+                                <th>Lidl</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin_app.js"></script>
+</body>
+</html>

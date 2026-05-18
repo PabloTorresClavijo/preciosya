@@ -1,0 +1,115 @@
+{
+  "products": [
+    { "id": 1, "title": "Leche Entera Asturiana", "description": "leche entera dairy central lechera asturiana", "thumbnail": "productos/leche_entera.png", "category": "lacteos", "preciosFijos": { "Mercadona": "1.15", "Carrefour": "1.22", "Dia": "1.18", "Lidl": "1.09" }, "allergens": ["lacteos"] },
+    
+    { "id": 2, "title": "Leche Semidesnatada Pascual", "description": "leche semidesnatada dairy pascual", "thumbnail": "productos/leche_semidesnatada.png", "category": "lacteos", "preciosFijos": { "Mercadona": "1.12", "Carrefour": "1.20", "Dia": "1.15", "Lidl": "1.05" }, "allergens": ["lacteos"] },
+    
+    { "id": 3, "title": "Yogur Natural Danone", "description": "yogurt natural dairy danone", "thumbnail": "productos/yogurt_natural.png", "category": "lacteos", "preciosFijos": { "Mercadona": "0.65", "Carrefour": "0.72", "Dia": "0.68", "Lidl": "0.59" }, "allergens": ["lacteos"] },
+    
+    { "id": 4, "title": "Actimel Fresa Danone", "description": "actimel fresa yogurt bebible dairy danone", "thumbnail": "productos/actimel_fresa.png", "category": "lacteos", "preciosFijos": { "Mercadona": "2.05", "Carrefour": "2.19", "Dia": "2.10", "Lidl": "1.95" }, "allergens": ["lacteos"] },
+    
+    { "id": 5, "title": "Mantequilla Lurpak", "description": "mantequilla butter dairy lurpak", "thumbnail": "productos/mantequilla.png", "category": "lacteos", "preciosFijos": { "Mercadona": "3.10", "Carrefour": "3.25", "Dia": "3.15", "Lidl": "2.95" }, "allergens": ["lacteos"] },
+    
+    { "id": 6, "title": "Queso Lonchas El Caserío", "description": "queso lonchas cheese el caserio dairy", "thumbnail": "productos/queso_lonchas.png", "category": "lacteos", "preciosFijos": { "Mercadona": "2.55", "Carrefour": "2.69", "Dia": "2.60", "Lidl": "2.39" }, "allergens": ["lacteos"] },
+    
+    { "id": 7, "title": "Pechuga de Pollo El Pozo", "description": "pechuga pollo chicken meat el pozo carne", "thumbnail": "productos/pechuga_pollo.png", "category": "carnes", "preciosFijos": { "Mercadona": "5.25", "Carrefour": "5.49", "Dia": "5.35", "Lidl": "5.10" }, "allergens": [] },
+    
+    { "id": 8, "title": "Jamón York El Pozo", "description": "jamon york ham meat el pozo carne", "thumbnail": "productos/jamonyork.png", "category": "carnes", "preciosFijos": { "Mercadona": "3.65", "Carrefour": "3.85", "Dia": "3.70", "Lidl": "3.45" }, "allergens": [] },
+    
+    { "id": 9, "title": "Jamón Serrano Navidul", "description": "jamon serrano ham meat navidul carne", "thumbnail": "productos/jamon.png", "category": "carnes", "preciosFijos": { "Mercadona": "7.90", "Carrefour": "8.25", "Dia": "8.00", "Lidl": "7.60" }, "allergens": [] },
+    
+    { "id": 10, "title": "Salchichas Oscar Mayer", "description": "salchichas frankfurt sausage meat oscar mayer carne", "thumbnail": "productos/salchichas.png", "category": "carnes", "preciosFijos": { "Mercadona": "2.45", "Carrefour": "2.59", "Dia": "2.50", "Lidl": "2.29" }, "allergens": ["gluten", "lacteos", "huevos"] },
+    
+    { "id": 11, "title": "Chorizo Revilla", "description": "chorizo revilla sausage meat carne", "thumbnail": "productos/chorizo.png", "category": "carnes", "preciosFijos": { "Mercadona": "3.95", "Carrefour": "4.15", "Dia": "4.00", "Lidl": "3.75" }, "allergens": [] },
+    
+    { "id": 12, "title": "Atún Claro Calvo", "description": "atun claro tuna fish pescado calvo lata", "thumbnail": "productos/atun_claro.png", "category": "pescados", "preciosFijos": { "Mercadona": "1.55", "Carrefour": "1.65", "Dia": "1.60", "Lidl": "1.45" }, "allergens": ["pescado"] },
+    
+    { "id": 13, "title": "Atún Claro Pescamar", "description": "atun claro tuna fish pescado pescamar lata", "thumbnail": "productos/atun_claro_pescamar.png", "category": "pescados", "preciosFijos": { "Mercadona": "1.25", "Carrefour": "1.35", "Dia": "1.30", "Lidl": "1.20" }, "allergens": ["pescado"] },
+    
+    { "id": 14, "title": "Sardinillas Calvo", "description": "sardinillas lata fish pescado calvo", "thumbnail": "productos/sardinillas.png", "category": "pescados", "preciosFijos": { "Mercadona": "1.35", "Carrefour": "1.45", "Dia": "1.40", "Lidl": "1.25" }, "allergens": ["pescado"] },
+    
+    { "id": 15, "title": "Salmón Ahumado Marinsa", "description": "salmon ahumado smoked fish pescado marinsa", "thumbnail": "productos/salmon_ahumado.png", "category": "pescados", "preciosFijos": { "Mercadona": "4.55", "Carrefour": "4.79", "Dia": "4.65", "Lidl": "4.39" }, "allergens": ["pescado"] },
+    
+    { "id": 16, "title": "Pan Bimbo de Molde", "description": "pan molde bread bimbo panaderia", "thumbnail": "productos/pan_bimbo.png", "category": "panaderia", "preciosFijos": { "Mercadona": "1.65", "Carrefour": "1.79", "Dia": "1.72", "Lidl": "1.55" }, "allergens": ["gluten", "lacteos", "huevos"] },
+    
+    { "id": 17, "title": "Pan Tostado Ortiz", "description": "pan tostado bread toast ortiz panaderia", "thumbnail": "productos/pan_tostado.png", "category": "panaderia", "preciosFijos": { "Mercadona": "1.95", "Carrefour": "2.10", "Dia": "2.00", "Lidl": "1.85" }, "allergens": ["gluten", "huevos"] },
+    
+    { "id": 18, "title": "Croissants La Bella Easo", "description": "croissants pastry panaderia bakery easo", "thumbnail": "productos/croissant.png", "category": "panaderia", "preciosFijos": { "Mercadona": "1.85", "Carrefour": "1.99", "Dia": "1.90", "Lidl": "1.75" }, "allergens": ["gluten", "lacteos", "huevos"] },
+    
+    { "id": 19, "title": "Magdalenas Valencianas Arenas", "description": "magdalenas muffins pastry panaderia bakery arenas dulces", "thumbnail": "productos/magdalenas.png", "category": "panaderia", "preciosFijos": { "Mercadona": "2.10", "Carrefour": "2.25", "Dia": "2.15", "Lidl": "1.95" }, "allergens": ["gluten", "lacteos", "huevos"] },
+    
+    { "id": 20, "title": "Oreo Original", "description": "galletas oreo cookies biscuits snack chocolate dulces", "thumbnail": "productos/oreos.png", "category": "snacks", "preciosFijos": { "Mercadona": "1.95", "Carrefour": "2.10", "Dia": "2.00", "Lidl": "1.79" }, "allergens": ["gluten", "lacteos"] },
+    
+    { "id": 21, "title": "Galletas Príncipe Lu", "description": "galletas principe lu cookies biscuits snack chocolate", "thumbnail": "productos/galleta_principe.png", "category": "snacks", "preciosFijos": { "Mercadona": "1.75", "Carrefour": "1.89", "Dia": "1.82", "Lidl": "1.65" }, "allergens": ["gluten", "lacteos", "frutos_secos"] },
+    
+    { "id": 22, "title": "Chips Lay's Clásicas", "description": "patatas fritas chips lays snack", "thumbnail": "productos/lays.png", "category": "snacks", "preciosFijos": { "Mercadona": "2.15", "Carrefour": "2.29", "Dia": "2.20", "Lidl": "1.99" }, "allergens": [] },
+    
+    { "id": 23, "title": "Doritos Nachos Tex Mex", "description": "doritos nachos chips snack", "thumbnail": "productos/doritos.png", "category": "snacks", "preciosFijos": { "Mercadona": "2.05", "Carrefour": "2.19", "Dia": "2.10", "Lidl": "1.95" }, "allergens": ["gluten", "lacteos"] },
+    
+    { "id": 24, "title": "Palomitas Hacendado Microondas", "description": "palomitas popcorn snack microondas", "thumbnail": "productos/palomitas.png", "category": "snacks", "preciosFijos": { "Mercadona": "1.35", "Carrefour": "1.49", "Dia": "1.40", "Lidl": "1.25" }, "allergens": [] },
+    
+    { "id": 25, "title": "Coca-Cola 2L", "description": "refresco coca cola soda drink bebida cola", "thumbnail": "productos/cocacola.png", "category": "bebidas", "preciosFijos": { "Mercadona": "2.25", "Carrefour": "2.39", "Dia": "2.30", "Lidl": "2.10" }, "allergens": [] },
+    
+    { "id": 26, "title": "Fanta Naranja 2L", "description": "refresco fanta naranja soda drink bebida", "thumbnail": "productos/fanta.png", "category": "bebidas", "preciosFijos": { "Mercadona": "2.10", "Carrefour": "2.25", "Dia": "2.15", "Lidl": "1.95" }, "allergens": [] },
+    
+    { "id": 27, "title": "Aquarius Limón", "description": "aquarius limon isotonica drink bebida", "thumbnail": "productos/acuarius.png", "category": "bebidas", "preciosFijos": { "Mercadona": "1.65", "Carrefour": "1.75", "Dia": "1.70", "Lidl": "1.55" }, "allergens": [] },
+    
+    { "id": 28, "title": "Agua Font Vella 1.5L", "description": "agua mineral font vella water drink bebida", "thumbnail": "productos/agua_fontvella.png", "category": "bebidas", "preciosFijos": { "Mercadona": "0.75", "Carrefour": "0.82", "Dia": "0.78", "Lidl": "0.69" }, "allergens": [] },
+    
+    { "id": 29, "title": "Zumo Don Simón Naranja", "description": "zumo naranja don simon orange juice drink bebida", "thumbnail": "productos/zumo_donsimon.png", "category": "bebidas", "preciosFijos": { "Mercadona": "1.95", "Carrefour": "2.10", "Dia": "2.00", "Lidl": "1.85" }, "allergens": [] },
+    
+    { "id": 30, "title": "Cerveza Estrella Damm Lata", "description": "cerveza estrella damm lata beer drink bebida", "thumbnail": "productos/cerveza_damm.png", "category": "bebidas", "preciosFijos": { "Mercadona": "1.05", "Carrefour": "1.15", "Dia": "1.10", "Lidl": "0.99" }, "allergens": ["gluten"] },
+    
+    { "id": 31, "title": "Vino Tinto Rioja Faustino", "description": "vino tinto rioja faustino red wine drink bebida", "thumbnail": "productos/vino.png", "category": "bebidas", "preciosFijos": { "Mercadona": "6.90", "Carrefour": "7.25", "Dia": "7.00", "Lidl": "6.60" }, "allergens": [] },
+    
+    { "id": 32, "title": "Café Molido Marcilla", "description": "cafe molido coffee ground marcilla cafe_te", "thumbnail": "productos/cafe_marcilla.png", "category": "cafe_te", "preciosFijos": { "Mercadona": "3.95", "Carrefour": "4.15", "Dia": "4.05", "Lidl": "3.75" }, "allergens": [] },
+    
+    { "id": 33, "title": "Café Cápsulas Nespresso", "description": "cafe capsulas coffee capsule nespresso cafe_te", "thumbnail": "productos/cafe_nespresso.png", "category": "cafe_te", "preciosFijos": { "Mercadona": "6.25", "Carrefour": "6.49", "Dia": "6.35", "Lidl": "6.05" }, "allergens": [] },
+    
+    { "id": 34, "title": "Colacao Original", "description": "colacao cacao chocolate bebida polvo cafe_te dairy", "thumbnail": "productos/colacao.png", "category": "cafe_te", "preciosFijos": { "Mercadona": "3.55", "Carrefour": "3.75", "Dia": "3.65", "Lidl": "3.40" }, "allergens": ["lacteos", "gluten"] },
+    
+    { "id": 35, "title": "Té Lipton Limón", "description": "te lipton limon lemon tea cafe_te infusion", "thumbnail": "productos/te_tipton.png", "category": "cafe_te", "preciosFijos": { "Mercadona": "2.35", "Carrefour": "2.49", "Dia": "2.40", "Lidl": "2.25" }, "allergens": [] },
+    
+    { "id": 36, "title": "Arroz SOS Largo", "description": "arroz sos largo rice cereal cereales", "thumbnail": "productos/arroz_sos.png", "category": "cereales", "preciosFijos": { "Mercadona": "1.95", "Carrefour": "2.10", "Dia": "2.00", "Lidl": "1.85" }, "allergens": [] },
+    
+    { "id": 37, "title": "Espaguetis Gallo nº3", "description": "espaguetis gallo pasta spaghetti noodles cereales", "thumbnail": "productos/espaguetti.png", "category": "cereales", "preciosFijos": { "Mercadona": "1.35", "Carrefour": "1.49", "Dia": "1.42", "Lidl": "1.29" }, "allergens": ["gluten", "huevos"] },
+    
+    { "id": 38, "title": "Macarrones Barilla", "description": "macarrones barilla pasta noodles cereales", "thumbnail": "productos/macarrones_barilla.png", "category": "cereales", "preciosFijos": { "Mercadona": "1.55", "Carrefour": "1.69", "Dia": "1.62", "Lidl": "1.45" }, "allergens": ["gluten", "huevos"] },
+    
+    { "id": 39, "title": "Cereales Kellogg's Corn Flakes", "description": "cereales kelloggs corn flakes desayuno breakfast cereal", "thumbnail": "productos/cereales_kelloggs.png", "category": "cereales", "preciosFijos": { "Mercadona": "3.25", "Carrefour": "3.45", "Dia": "3.35", "Lidl": "3.10" }, "allergens": ["gluten"] },
+    
+    { "id": 40, "title": "Manzanas Golden", "description": "manzanas golden apples fruit frutas_verduras fruta", "thumbnail": "productos/manzanas_golden.png", "category": "frutas_verduras", "preciosFijos": { "Mercadona": "2.15", "Carrefour": "2.29", "Dia": "2.20", "Lidl": "1.99" }, "allergens": [] },
+    
+    { "id": 41, "title": "Plátanos de Canarias", "description": "platanos canarias bananas fruit frutas_verduras fruta", "thumbnail": "productos/platanos.png", "category": "frutas_verduras", "preciosFijos": { "Mercadona": "2.05", "Carrefour": "2.19", "Dia": "2.10", "Lidl": "1.95" }, "allergens": [] },
+    
+    { "id": 42, "title": "Tomates Rama", "description": "tomates rama tomatoes vegetable frutas_verduras verdura", "thumbnail": "productos/tomates.png", "category": "frutas_verduras", "preciosFijos": { "Mercadona": "2.10", "Carrefour": "2.25", "Dia": "2.15", "Lidl": "1.98" }, "allergens": [] },
+    
+    { "id": 43, "title": "Lechuga Iceberg", "description": "lechuga iceberg lettuce vegetable frutas_verduras verdura", "thumbnail": "productos/lechuga.png", "category": "frutas_verduras", "preciosFijos": { "Mercadona": "1.15", "Carrefour": "1.25", "Dia": "1.20", "Lidl": "1.05" }, "allergens": [] },
+    
+    { "id": 44, "title": "Pizza Margarita Casa Tarradellas", "description": "pizza margarita casa tarradellas congelada frozen", "thumbnail": "productos/pizza_margarita.png", "category": "congelados", "preciosFijos": { "Mercadona": "3.95", "Carrefour": "4.15", "Dia": "4.05", "Lidl": "3.75" }, "allergens": ["gluten", "lacteos", "huevos"] },
+    
+    { "id": 45, "title": "Croquetas la Cocinera", "description": "croquetas pescanova congeladas frozen", "thumbnail": "productos/croquetas.png", "category": "congelados", "preciosFijos": { "Mercadona": "3.55", "Carrefour": "3.75", "Dia": "3.65", "Lidl": "3.40" }, "allergens": ["gluten", "huevos", "pescado"] },
+    
+    { "id": 46, "title": "Helado Magnum Classic", "description": "helado magnum classic ice cream frozen congelado", "thumbnail": "productos/magnum.png", "category": "congelados", "preciosFijos": { "Mercadona": "2.95", "Carrefour": "3.10", "Dia": "3.00", "Lidl": "2.79" }, "allergens": ["lacteos", "frutos_secos"] },
+    
+    { "id": 47, "title": "Tomate Frito Orlando", "description": "tomate frito orlando sauce salsa salsas", "thumbnail": "productos/tomate_orlando.png", "category": "salsas", "preciosFijos": { "Mercadona": "1.29", "Carrefour": "1.39", "Dia": "1.35", "Lidl": "1.19" }, "allergens": [] },
+    
+    { "id": 48, "title": "Ketchup Heinz", "description": "ketchup heinz sauce salsas", "thumbnail": "productos/ketchup.png", "category": "salsas", "preciosFijos": { "Mercadona": "2.45", "Carrefour": "2.59", "Dia": "2.50", "Lidl": "2.29" }, "allergens": [] },
+    
+    { "id": 49, "title": "Aceite de Oliva Virgen Extra Carbonell", "description": "aceite oliva virgen extra carbonell olive oil aceites", "thumbnail": "productos/aceite.png", "category": "aceites", "preciosFijos": { "Mercadona": "8.25", "Carrefour": "8.55", "Dia": "8.40", "Lidl": "7.95" }, "allergens": [] },
+    
+    { "id": 50, "title": "Chocolate con Leche Milka", "description": "chocolate leche milka milk chocolate sweet dulces", "thumbnail": "productos/milka.png", "category": "dulces", "preciosFijos": { "Mercadona": "1.99", "Carrefour": "2.15", "Dia": "2.05", "Lidl": "1.89" }, "allergens": ["lacteos", "frutos_secos"] },
+    
+    { "id": 52, "title": "Zumo de naranja natural", "description": "zumo de naranja natural con pulpa recien exprimido", "thumbnail": "productos/bibi.png", "category": "bebidas", "preciosFijos": { "Mercadona": "1.25", "Carrefour": "1.35", "Dia": "1.30", "Lidl": "1.15" }, "allergens": [] },
+    
+    { "id": 53, "title": "Pan Viena", "description": "Pan Viena Natural DyL 80g - Pan precocido y bollería congelada", "thumbnail": "productos/panviena.png", "category": "panaderia", "preciosFijos": { "Mercadona": "0.55", "Carrefour": "0.60", "Dia": "0.58", "Lidl": "0.50" }, "allergens": ["gluten", "lacteos", "huevos"] },
+    
+    { "id": 54, "title": "Aguacate", "description": "Aguacate fresco de la huerta de pablo", "thumbnail": "productos/aguacate.png", "category": "frutas_verduras", "preciosFijos": { "Mercadona": "1.49", "Carrefour": "1.59", "Dia": "1.55", "Lidl": "1.39" }, "allergens": [] },
+    
+    { "id": 55, "title": "Tomate Triturado", "description": "Tomate triturado de la huerta bolognesa", "thumbnail": "productos/tomate_triturado.png", "category": "salsas", "preciosFijos": { "Mercadona": "1.75", "Carrefour": "1.89", "Dia": "1.82", "Lidl": "1.65" }, "allergens": [] },
+    
+    { "id": 56, "title": "Queso Fresco", "description": "Queso fresco de burgos palancares", "thumbnail": "productos/queso_fresco.png", "category": "lacteos", "preciosFijos": { "Mercadona": "1.95", "Carrefour": "2.10", "Dia": "2.00", "Lidl": "1.75" }, "allergens": ["lacteos"] },
+    
+    { "id": 57, "title": "Croissants de chocolate", "description": "Croissants de chocolate que dani siempre compra", "thumbnail": "productos/croissants_dani.png", "category": "panaderia", "preciosFijos": { "Mercadona": "1.65", "Carrefour": "1.79", "Dia": "1.55", "Lidl": "1.95" }, "allergens": ["gluten", "lacteos", "huevos"] }
+  ]
+}

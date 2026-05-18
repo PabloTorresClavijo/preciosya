@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página no encontrada</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <link rel="icon" type="image/png" href="img/logo2.png">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: var(--bg);
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 600px;
+        }
+
+        .error-logo {
+            margin-bottom: 32px;
+        }
+
+        .error-logo img {
+            height: 60px;
+            width: auto;
+            opacity: 0.8;
+        }
+
+        .error-code {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 120px;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            line-height: 1;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .error-title {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 36px;
+            letter-spacing: 0.05em;
+            color: var(--text);
+            margin: 16px 0;
+            line-height: 1.2;
+        }
+
+        .error-description {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.8;
+            margin: 20px 0 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .error-icon {
+            font-size: 80px;
+            margin: 20px 0;
+            opacity: 0.6;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .error-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border: 2px solid var(--border);
+            background: var(--accent);
+            color: white;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .error-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(111, 143, 114, 0.2);
+        }
+
+        .error-btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .error-btn-secondary:hover {
+            background: var(--stripe);
+        }
+
+        .error-divider {
+            width: 60px;
+            height: 2px;
+            background: var(--border-thin);
+            margin: 32px auto;
+        }
+
+        .error-footer {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 32px;
+        }
+
+        .error-footer p {
+            margin: 8px 0;
+        }
+
+        .error-code-box {
+            background: var(--stripe);
+            border: 1px solid var(--border-thin);
+            padding: 16px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 12px;
+            color: var(--muted);
+            word-break: break-all;
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 80px;
+            }
+
+            .error-title {
+                font-size: 28px;
+            }
+
+            .error-actions {
+                flex-direction: column;
+            }
+
+            .error-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .error-container {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+<body class="light">
+
+<div class="error-container">
+    <div class="error-logo">
+        <img src="img/logo2.png" alt="PRECIOSYA">
+    </div>
+
+    <h1 class="error-code">404</h1>
+    
+    <h2 class="error-title">Página no encontrada</h2>
+
+    <div class="error-icon">🔍</div>
+
+    <p class="error-description">
+        Lo sentimos, la página que buscas no existe o ha sido movida. 
+        Pero no te preocupes, puedes volver al inicio y seguir comparando precios.
+    </p>
+
+    <div class="error-divider"></div>
+
+    <div class="error-actions">
+        <a href="index.html" class="error-btn">
+            <span class="material-symbols-rounded">home</span>
+            Volver al inicio
+        </a>
+        <a href="index.html" class="error-btn error-btn-secondary">
+            <span class="material-symbols-rounded">search</span>
+            Buscar productos
+        </a>
+    </div>
+
+    <div class="error-footer">
+        <p>© 2026 PRECIOSYA — Comparador de precios</p>
+        <p>Si crees que esto es un error, <a href="index.html#contacto" style="color: var(--accent); text-decoration: none;">contacta con nosotros</a></p>
+    </div>
+</div>
+
+<script>
+    // Aplicar tema guardado
+    const THEME_KEY = "preciosya_tema";
+    const dark = localStorage.getItem(THEME_KEY) === "dark";
+    document.body.classList.toggle("dark", dark);
+    document.body.classList.toggle("light", !dark);
+</script>
+
+</body>
+</html>
