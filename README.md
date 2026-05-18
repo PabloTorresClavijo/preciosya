@@ -114,8 +114,6 @@ Comparador de precios de supermercado en tiempo real. Consulta y compara los pre
 
 ### 📁 Estructura del proyecto
 
-<div align="center">
-
 ```
 PRECIOSYA/
 ├── index.html              # Página principal
@@ -137,6 +135,8 @@ PRECIOSYA/
     └── productos/          # Imágenes de los productos
 ```
 
+<div align="center">
+
 <br>
 
 ---
@@ -145,12 +145,12 @@ PRECIOSYA/
 
 ### ⚙️ Instalación
 
-<div align="center">
-
 1. Clona el repositorio en tu servidor local (XAMPP, Laragon, etc.)
 2. Importa `database.sql` en tu instancia de MySQL
 3. Configura la conexión a la base de datos en `api.php` y `auth.php`
 4. Abre `index.html` desde el servidor local
+
+<div align="center">
 
 <br>
 
