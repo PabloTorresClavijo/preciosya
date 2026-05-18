@@ -9,7 +9,7 @@
 <br>
 
 > [!NOTE]
-> **Repositorio público de portfolio** 
+> **Repositorio público** 
 
 <div align="center">
 
