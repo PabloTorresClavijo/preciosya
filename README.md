@@ -9,7 +9,7 @@
 <br>
 
 > [!NOTE]
-> **Repositorio público de portfolio** — El código fuente completo se mantiene en un repositorio privado por razones de seguridad y propiedad intelectual. Este espacio sirve como portfolio técnico y documentación de arquitectura para reclutadores y desarrolladores interesados en el proyecto.
+> **Repositorio público de portfolio** 
 
 <div align="center">
 
