@@ -27,7 +27,7 @@ Comparador de precios de supermercado en tiempo real. Consulta y compara los pre
 
 <div align="center">
 
-*(Captura de pantalla de la aplicación)*
+https://imgur.com/a/qkgZXE4
 
 <br>
 
